@@ -26,9 +26,12 @@
  * ```
  */
 
-import './index.css';
+// import './index.css';
 import { createApp } from 'vue';
 import App from './App.vue';
+import { createPinia } from 'pinia';
+const app = createApp(App);
+app.use(createPinia());
 
-createApp(App).mount('#app');
+app.mount('#app');
 console.log('👋 This message is being logged by "renderer.ts", included via Vite');

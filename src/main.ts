@@ -14,7 +14,8 @@ const createWindow = () => {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true, // Protect against prototype pollution
-      sandbox: true // Enable sandbox mode
+      sandbox: true, // Enable sandbox mode
+      backgroundThrottling: false // Disable throttling of background tabs
     }
   });
 

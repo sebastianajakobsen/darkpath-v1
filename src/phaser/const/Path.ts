@@ -1,0 +1,1 @@
+export const SQUARED_STOP_THRESHOLD = 4000;
