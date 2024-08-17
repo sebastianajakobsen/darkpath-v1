@@ -1,0 +1,76 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "worker": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:import/recommended",
+    "plugin:import/electron",
+    "plugin:import/typescript",
+    "@vue/eslint-config-typescript",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["*.vue"],
+      "parser": "vue-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "ecmaVersion": 2020,
+        "sourceType": "module"
+      }
+    }
+  ],
+  "globals": {
+    "PF": "readonly"
+  },
+  "ignorePatterns": ["pathfinding-browser.min.js", "public/workers/"],
+  "rules": {
+    "no-console": "error",
+    "eqeqeq": "error",
+    "no-unused-vars": "warn",
+    "no-var": "error",
+    "prefer-const": "error",
+    "vue/no-unused-components": "warn",
+    "vue/no-unused-vars": "warn",
+    "vue/multi-word-component-names": "warn",
+    "vue/component-name-in-template-casing": ["error", "PascalCase"],
+    "vue/order-in-components": ["error"],
+    "vue/attributes-order": ["error"],
+    "brace-style": ["error", "1tbs"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "comma-dangle": ["error", "never"], // Adjust this rule to match Prettier's setting
+    "no-duplicate-imports": "error",
+    "@typescript-eslint/type-annotation-spacing": ["error", { "before": false, "after": true }],
+    "indent": ["error", 2],
+    "object-curly-spacing": ["error", "always"],
+    "array-bracket-spacing": ["error", "never"],
+    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
+    "consistent-return": "error",
+    "default-case": "error",
+    "dot-notation": "error",
+    "no-implicit-coercion": ["error", { "boolean": false }],
+    "@typescript-eslint/no-shadow": "error",
+    "no-unreachable": "error"
+  }
+}
