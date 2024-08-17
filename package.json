@@ -11,6 +11,20 @@
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx ."
   },
+  "keywords": [],
+  "author": {
+    "name": "SAJ",
+    "email": "seb_jakobsen@live.dk"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "dat.gui": "^0.7.9",
+    "electron-squirrel-startup": "^1.0.1",
+    "phaser": "^3.80.1",
+    "vue": "^3.4.38",
+    "pinia": "^2.1.7",
+    "pathfinding": "^0.4.18"
+  },
   "devDependencies": {
     "@electron-forge/cli": "^7.4.0",
     "@electron-forge/maker-deb": "^7.4.0",
@@ -39,19 +53,5 @@
     "vite": "^5.0.12",
     "@types/dat.gui": "^0.7.13",
     "sass": "^1.77.4"
-  },
-  "keywords": [],
-  "author": {
-    "name": "SAJ",
-    "email": "seb_jakobsen@live.dk"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "dat.gui": "^0.7.9",
-    "electron-squirrel-startup": "^1.0.1",
-    "phaser": "^3.80.1",
-    "vue": "^3.4.38",
-    "pinia": "^2.1.7",
-    "pathfinding": "^0.4.18"
   }
 }
