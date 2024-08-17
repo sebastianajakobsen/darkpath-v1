@@ -1,11 +1,27 @@
 <script setup lang="ts">
-import PhaserGame from '@/components/PhaserGame.vue';
+import PlayerInterface from '@/components/PlayerInterface.vue';
+import { onMounted, onUnmounted } from 'vue';
+import config from '@/phaser/config';
+
+let game = null;
+
+onMounted(() => {
+  game = new Phaser.Game(config);
+});
+
+onUnmounted(() => {
+  game.destroy(true);
+});
 </script>
 
 <template>
-  <div id="app">
-    <PhaserGame />
-  </div>
+  <PlayerInterface />
 </template>
 
-<style></style>
+<style>
+@import '/assets/css/reset.css';
+
+body {
+  font-family: 'Cinzel', serif;
+}
+</style>
